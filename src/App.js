@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import {createContext, useState, useEffect} from 'react'
+import {BrowserRouter, Route} from "react-router-dom";
 
-function App() {
+import {Home} from './pages/Home'
+import {FullMoneyHistory} from './pages/FullMoneyHistory'
+
+export const MoneyHistoryContext = createContext({})
+
+function App(){
+  const [moneyHistory, setMoneyHistory] = useState([{}, {}, {}]);
+  const [money, setMoney] = useState({
+    balance: 0,
+    income: 0,
+    expense: 0,
+    title: "",
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <BrowserRouter>
+        <MoneyHistoryContext.Provider value={{moneyHistory, setMoneyHistory, money, setMoney}}>
+          <Route path="/" exact component={Home} />
+          <Route path="/FullMoneyHistory" component={FullMoneyHistory}/>
+        </MoneyHistoryContext.Provider>
+      </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,101 @@
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 30px;
+
+}
+
+.main-content > div{
+  width: 300px;
+}
+
+.principal-title{
+  text-align: center;
+  margin-bottom: 30px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.current-money{
+  margin-bottom: 20px;
+}
+
+.container-money{
+  display: flex;
+  justify-content: space-around;
+
+  padding: 20px;
+
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  margin-bottom: 30px;
+}
+
+.container-money div {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.container-money div:nth-child(1) span:nth-child(2){
+  color: #67DCA2;
+} 
+
+.container-money div:nth-child(2) span:nth-child(2){
+  color: #B83329;
+}
+
+/* ----------------- */
+
+.title-add-new-transaction{
+  margin-top: 30px;
+}
+
+input{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #59595959;
+  margin: 10px 0px;
+}
+
+.new-transaction{
+  width: 100%;
+  padding: 10px;
+  background-color: #6448dd;
+  border: none;
+  color: #fff;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.new-transaction:hover{
+  filter: brightness(0.9);
+}
+
+.line{
+  width: 100%;
+  height: 1px;
+  background-color: #59595959;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.clear-transactions-btn {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  background-color: #ee1101;
+  color: #fff;
+
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.clear-transactions-btn:hover{
+  filter: brightness(0.9);
+}

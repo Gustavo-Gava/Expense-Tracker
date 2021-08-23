@@ -7,7 +7,7 @@ import {FullMoneyHistory} from './pages/FullMoneyHistory'
 export const MoneyHistoryContext = createContext({})
 
 function App(){
-  const [moneyHistory, setMoneyHistory] = useState([{}, {}, {}]);
+  const [moneyHistory, setMoneyHistory] = useState([{id: Math.random()}, {id: Math.random()}, {id: Math.random()}]);
   const [money, setMoney] = useState({
     balance: 0,
     income: 0,

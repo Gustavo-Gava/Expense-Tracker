@@ -1,7 +1,3 @@
-import { useEffect } from "react";
-
-import { MoneyHistoryContext } from "../App";
-
 export function MoneyHistoryConstructor({ moneyHistoryItem }) {
   return (
     <div

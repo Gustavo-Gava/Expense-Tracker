@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { useMoneyHistory } from "../hooks/useMoneyHistory";
 
@@ -10,10 +10,6 @@ export function Home() {
   const [inputText, setInputText] = useState("");
   const [amount, setAmount] = useState(0);
   const { money, setMoney, moneyHistory, setMoneyHistory } = useMoneyHistory();
-
-  useEffect(() => {
-    setMoney(money);
-  }, []);
 
   function handleAddNewAmount() {
     const title = inputText;
@@ -42,11 +38,11 @@ export function Home() {
     setMoneyHistory([
       ...moneyHistory,
       {
+        id: Math.random(),
         title,
         amount: parseFloat(amount),
       },
     ]);
-    console.log(moneyHistory);
     setInputText("");
     setAmount(0);
   }

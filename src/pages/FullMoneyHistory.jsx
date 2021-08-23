@@ -1,14 +1,15 @@
-import { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
+import { useMoneyHistory } from "../hooks/useMoneyHistory";
 import { MoneyHistoryConstructor } from "../components/MoneyHistoryConstructor";
-import { MoneyHistoryContext } from "../App";
 
 import "../assets/styles/FullMoneyHistory.css";
 
 export function FullMoneyHistory() {
-  const { moneyHistory, setMoneyHistory } = useContext(MoneyHistoryContext);
+  const { moneyHistory } = useMoneyHistory();
   const history = useHistory();
+
+  console.log(moneyHistory);
 
   function goBack() {
     history.goBack();

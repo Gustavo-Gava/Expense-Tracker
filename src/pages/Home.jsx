@@ -1,15 +1,15 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
+
+import { useMoneyHistory } from "../hooks/useMoneyHistory";
 
 import { MoneyHistory } from "../components/MoneyHistory";
-import { MoneyHistoryContext } from "../App";
 
 import "../assets/styles/Home.css";
 
 export function Home() {
   const [inputText, setInputText] = useState("");
   const [amount, setAmount] = useState(0);
-  const { moneyHistory, setMoneyHistory } = useContext(MoneyHistoryContext);
-  const { money, setMoney } = useContext(MoneyHistoryContext);
+  const { money, setMoney, moneyHistory, setMoneyHistory } = useMoneyHistory();
 
   useEffect(() => {
     setMoney(money);

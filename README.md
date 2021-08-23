@@ -15,7 +15,7 @@ Project developed with React, where concepts such as hooks (useState, useContext
 
 ## Prerequisites
 
-Make sure you have installed: [](Node.js), [](Yarn) e [](Git)
+Make sure you have installed: [Node.js](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/) e [Git](https://git-scm.com/)
 
 ## How to run?
 
@@ -38,6 +38,6 @@ $ yarn start
 
 It will be available on: http://localhost:3000
 
-### See my [](Linked-in)
+### See my [Linked-in](www.linkedin.com/in/gustavo-gava)
 
 ## Thanks!
